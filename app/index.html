@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laguna Gold — Cover Art Maker</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<main class="app">
+  <section class="controls" aria-label="Editor controls">
+    <h1>Laguna Gold</h1>
+    <p class="sub">Hero-dominant cover art. Pick photos, grade them, write the title, export a poster PNG.</p>
+
+    <h2>1 · Layout</h2>
+    <div id="layouts" class="chips"></div>
+
+    <h2>2 · Colour grade</h2>
+    <div id="grades" class="chips"></div>
+    <label class="slider">Intensity
+      <input id="intensity" type="range" min="0" max="100" value="85">
+      <span id="intensity-val">85%</span>
+    </label>
+
+    <h2>3 · Caption</h2>
+    <label>Title <input id="title" type="text" maxlength="24" value="LAGUNA GOLD"></label>
+    <label>Kicker <input id="kicker" type="text" maxlength="30" value="WELCOME TO LAGUNA"></label>
+    <label>Tagline <input id="tagline" type="text" maxlength="40" value="golden tides, neon nights"></label>
+    <label>Pill <input id="pill" type="text" maxlength="16" value="SUMMER 2026"></label>
+    <div id="caption-styles" class="chips"></div>
+    <label class="slider">Title size
+      <input id="caption-size" type="range" min="50" max="150" value="100">
+      <span id="caption-size-val">100%</span>
+    </label>
+    <label>Title position
+      <select id="caption-pos">
+        <option value="bottom" selected>Bottom</option>
+        <option value="center">Centre</option>
+        <option value="top">Top</option>
+      </select>
+    </label>
+
+    <h2>4 · Panels</h2>
+    <p id="panel-label" class="panel-label">Panel HERO</p>
+    <div id="panel-picker" class="chips"></div>
+    <label>Photo for this panel
+      <select id="panel-photo"></select>
+    </label>
+    <label>Or use your own photo
+      <input id="upload" type="file" accept="image/*">
+    </label>
+    <label class="slider">Zoom
+      <input id="zoom" type="range" min="100" max="220" value="100">
+      <span id="zoom-val">100%</span>
+    </label>
+    <label class="slider">Crop left–right
+      <input id="posx" type="range" min="0" max="100" value="50">
+    </label>
+    <label class="slider">Crop up–down
+      <input id="posy" type="range" min="0" max="100" value="50">
+    </label>
+    <p class="hint">Tip: drag the preview to pan the selected panel's crop. Photos are read on your machine and never uploaded.</p>
+
+    <h2>5 · Export PNG</h2>
+    <div class="exports">
+      <button data-export="1080x1080" type="button">Square 1080 × 1080</button>
+      <button data-export="1080x1350" type="button">Portrait 1080 × 1350</button>
+      <button data-export="1920x1080" type="button">Wide 1920 × 1080</button>
+    </div>
+    <p id="status" role="status"></p>
+  </section>
+  <section class="preview" aria-label="Live cover preview">
+    <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
+  </section>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
