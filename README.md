@@ -1,5 +1,9 @@
 # Laguna Gold — Cover Art Maker
 
+[![gta6-cover-art-01](https://make.fun/badge/gta6-cover-art-01.svg)](https://make.fun/c/gta6-cover-art-01)
+[![rank](https://make.fun/badge/gta6-cover-art-01/zoelicious/laguna-gold-cover-studio-2/rank.svg)](https://make.fun/c/gta6-cover-art-01)
+[![reward](https://make.fun/badge/gta6-cover-art-01/zoelicious/laguna-gold-cover-studio-2/reward.svg)](https://make.fun/c/gta6-cover-art-01)
+
 An offline web app that turns photos + a caption into hero-dominant,
 poster-style cover art: a big hero panel on the left, supporting photo
 panels on the right, a golden-hour / sunset / neon / bright-day / pop-art
@@ -12,8 +16,9 @@ real PNG in one click: 1080×1080, 1080×1350, or 1920×1080.
   colour grade + intensity, a caption style/size/position, then set each
   panel's photo, zoom and crop (drag the preview to pan).
 - Photos are read on your own machine and never uploaded; the app makes
-  no network request. Fonts are SIL OFL files under `app/fonts/`
-  (Archivo Black, Oswald, Pacifico). No Rockstar logo, artwork,
+  no network request. Fonts are SIL OFL (Archivo Black, Oswald, Pacifico),
+  embedded as data URIs in `app/fonts/fonts.css`; their licenses are in
+  `app/fonts/OFL-*.txt`. No Rockstar logo, artwork,
   character or font is used, and the art never says "GTA".
 
 Built for the make.fun bounty **gta6-cover-art-01**

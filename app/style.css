@@ -1,18 +1,4 @@
-@font-face {
-  font-family: 'Archivo Black';
-  src: url('./fonts/ArchivoBlack-Regular.ttf') format('truetype');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Oswald';
-  src: url('./fonts/Oswald-Variable.ttf') format('truetype');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Pacifico';
-  src: url('./fonts/Pacifico-Regular.ttf') format('truetype');
-  font-display: swap;
-}
+@import './fonts/fonts.css';
 
 * { box-sizing: border-box; }
 body {
